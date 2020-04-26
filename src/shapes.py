@@ -9,11 +9,16 @@ class CuboidConfig:
         self.origin = origin
         self.size = size
 
+    def __repr__(self):
+        return f"CuboidConfig(origin={self.origin}, size={self.size})"
+
 
 class Cuboid(RenderableObjectBase):
     def __init__(self, config: CuboidConfig):
         self.config = config
 
+    def __repr(self):
+        return f"Cuboid({self.config})"
     def render(self):
         bpy.ops.mesh.primitive_cube_add(
             radius=0.5,

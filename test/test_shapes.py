@@ -7,9 +7,11 @@ from src.shapes import CuboidConfig, Cuboid
 from src.meta import ObjectList
 from src.utils import Float3D
 
-a=Float3D([1., 0., 0.])
+a = Float3D([1.0, 0.0, 0.0])
 render_object = ObjectList(
-    Cuboid(CuboidConfig(origin=Float3D([idx, 0., 0.]), size=Float3D([0.5, idx, idx]),))
+    Cuboid(
+        CuboidConfig(origin=Float3D([idx, 0.0, 0.0]), size=Float3D([0.5, idx, idx]),)
+    )
     for idx in range(100)
 )
 
